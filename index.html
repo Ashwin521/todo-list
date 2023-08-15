@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO list</title>
     <link rel="stylesheet" href="todo.css">
-    <script src="todo.js>"></script>
+    <script src="todo.js" defer></script>
 </head>
 
 <body>
-
     <main>
         <div class="box">
-            <input type="text" id="item" autofocus placeholder="type something">
-            <ul id="to-do box">
-                <li>Reading books
-                    <i class="fas fa-times"></i>
+            <input type="text" id="textbox" autofocus placeholder="type something">
+            <ul id="to-do-container">
+                <li class="to-do-list">
+                    <input type="checkbox" class="to-do-check" onclick="checkedbox(event)">
+                    <div class="to-do-description">This looks like todo item</div>
+                    <button type="button" class="to-do-delete" onclick="deletetodo(event)"><img src="./cross.png"></img></button>
                 </li>
             </ul>
         </div>

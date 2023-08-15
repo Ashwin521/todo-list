@@ -4,6 +4,12 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
+button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 main{
     width: 100%;
     height: 100vh;
@@ -12,15 +18,17 @@ main{
     justify-content: center;
     align-items: center;
 }
+
 .box{
     width: 600px;
-    min-height: 500px;
+    height: 500px;
     background-color: white;
     border-radius: 5px;
     padding: 15px;
+    overflow-y: hidden;
 }
 
-#item{
+#textbox{
     font-weight: light;
     padding: 10px;
     font-size: 20px;
@@ -30,20 +38,61 @@ main{
     box-shadow: 0px 0px 2px red;
 }
 
-#to-do-box{
-
+#to-do-container{
     margin-top: 20px;
     list-style: none;
+    overflow-y: auto;
+    height: 70%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 
-#to-do-box li{
+.to-do-list{
     margin: 20px;
-    background-color:grey;
-    color: white;
+    color: black;
     border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    border: black solid 2px;
+    padding: 10px 10px;
+    position: relative;
 }
-#to-do-box li i{
-    position: absolute;
-    right: 500px;
+
+.to-do-list input[type = 'checkbox']{
+    height: 30px;
+    width: 30px;
+    margin: 0;
+    cursor: pointer;
+    border: 0px;
+    outline: 0px;
+    /* -webkit-appearance: none;
+    -moz-appearance: none; */
+    accent-color: aqua;
+    border: 0;
+    outline: 0;
+    /* appearance: none; */
+}
+
+.to-do-list div{
+    min-width: 100px;
+    width: 70%;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.to-do-delete{
+    margin: 0 10px;
+    height: 30px;
+    width: 30px;
+}
+.to-do-delete img {
+    height: inherit;
+    width: inherit;
+}
+
+.deleted{
+    display: none;
 }
