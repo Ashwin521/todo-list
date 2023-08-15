@@ -1,7 +1,6 @@
 const textbox = document.querySelector("#textbox")
 const todo = document.querySelector("#to-do-container")
 var alltodos = []
-
 const getfromlocalstorage = () => {
     if (localStorage.getItem("todos") !== null) {
         let localarr = JSON.parse(localStorage.getItem("todos"))
@@ -9,11 +8,9 @@ const getfromlocalstorage = () => {
             let newtodo = document.createElement('li')
             newtodo.classList.add('to-do-list')
             newtodo.innerHTML = `<input type="checkbox" class="to-do-check" onclick = 'checkedbox(event)'><div class="to-do-description">${description}</div><button type="button" class="to-do-delete" onclick="deletetodo(event)"><img src="./cross.png"></img></button>`
-
             alltodos.push(newtodo)
         });
     }
-
 }
 
 getfromlocalstorage()
