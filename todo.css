@@ -42,7 +42,7 @@ main{
     margin-top: 20px;
     list-style: none;
     overflow-y: auto;
-    height: 70%;
+    height: 85%;
     overflow-x: hidden;
     position: relative;
 }

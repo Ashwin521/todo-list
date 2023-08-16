@@ -1,6 +1,7 @@
 const textbox = document.querySelector("#textbox")
 const todo = document.querySelector("#to-do-container")
 var alltodos = []
+
 const getfromlocalstorage = () => {
     if (localStorage.getItem("todos") !== null) {
         let localarr = JSON.parse(localStorage.getItem("todos"))
@@ -24,7 +25,7 @@ const addtodos = () => {
         localarr.push(element.children[1].innerHTML)
     });
     localStorage.setItem('todos', JSON.stringify(localarr))
-    console.log(JSON.parse(localStorage.getItem('todos')))
+    // console.log(JSON.parse(localStorage.getItem('todos')))
 }
 
 if (alltodos.length > 0) {
